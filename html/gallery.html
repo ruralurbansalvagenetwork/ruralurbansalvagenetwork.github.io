@@ -1,124 +1,195 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | RUSaN</title>
+  <meta name="description" content="Explore albums of community projects by RUSaN, including bakery training, health screening, soap making, and more." />
   <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
-  <script src="js/flowbite.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+  <style>
+  img {
+    width: 400px; /* set your desired width */
+    height: 400px; /* set your desired height */
+    object-fit: cover; /* or 'contain' depending on how you want the image to behave */
+  }
+  img.h-8 {
+    width: 50px;
+    height: 50px;
+    object-fit: initial;
+  }
+</style>
 </head>
-<body>
-  <!--NAVBAR-->
+<body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-white">
 
-
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+  <!-- NAVBAR -->
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="../index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="../images/main/logo.jpg" class="h-8" alt="RUSaN Logo" />
         <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RUSaN</span>
-    </a>
-    <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
         </svg>
-    </button>
-    <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="../index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-        </li>
-        <li>
-          <a href="about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About Us</a>
-        </li>
-        <li>
-          <a href="gallery.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Gallery</a>
-        </li>
-        <li>
-          <a href="contact.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-        </li>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li><a href="../index.html" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a></li>
+          <li><a href="about.html" class="block py-2 px-3 text-gray-900 hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500">About Us</a></li>
+          <li><a href="gallery.html" class="block py-2 px-3 text-gray-900 hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500">Gallery</a></li>
+          <li><a href="contact.html" class="block py-2 px-3 text-gray-900 hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ALBUM SELECTOR -->
+  <div id="albums-overview" class="py-8 px-4">
+    <h2 class="text-4xl font-extrabold mb-8 text-center">Albums</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div onclick="showAlbum('album1')" class="cursor-pointer bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg text-center transition">
+        <h3 class="text-xl font-semibold mb-2">Empowering Urban Poor Women in Madina Municipality</h3>
+        <img src="../images/russanprojects/rusanproject1/banner.jpeg" alt="Bakery Project" class="h-40 w-full object-cover rounded" />
+      </div>
+      <div onclick="showAlbum('album2')" class="cursor-pointer bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg text-center transition">
+        <h3 class="text-xl font-semibold mb-2">Youth for Climate Action: Tree Planting Initiative at SDD-UBIDS</h3>
+        <img src="../images/russanprojects/tree/tree3.jpg" alt="Health Screening" class="h-40 w-full object-cover rounded" />
+      </div>
+      <div onclick="showAlbum('album3')" class="cursor-pointer bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg text-center transition">
+        <h3 class="text-xl font-semibold mb-2">Empowering Women and Girls with Disabilities in Adentan Municipality</h3>
+        <img src="../images/russanprojects/adenta/adenta1.jpg" alt="Soap Making" class="h-40 w-full object-cover rounded" />
+      </div>
+      <div onclick="showAlbum('album4')" class="cursor-pointer bg-gray-100 dark:bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg text-center transition">
+        <h3 class="text-xl font-semibold mb-2">Promoting Health, Skills, and Economic Empowerment for Rural Women in Wa West,Ghana</h3>
+        <img src="../images/russanprojects/wawest/wa1.jpg" alt="wawest" class="h-40 w-full object-cover rounded" />
+      </div>
+    </div>
+  </div>
+
+  <!-- INDIVIDUAL ALBUMS -->
+
+  <div id="album1" class="hidden px-4 pb-10">
+    <button onclick="goBack()" class="mb-4 text-blue-600 hover:underline">← Back to Albums</button>
+    <h2 class="text-3xl font-bold mb-4">Empowering Urban Poor Women in Madina Municipality</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="../images/russanprojects/rusanproject1/bakery1.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/bakery2.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/bakery3.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/bakery4.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/bakery6.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/business1.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/final1.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/final2.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/final3.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/healthscreening1.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/healthscreening2.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/soapmaking1.jpeg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/rusanproject1/soapmaking2.jpeg" alt="" class="rounded-lg" />
+    </div>
+  </div>
+
+  <div id="album2" class="hidden px-4 pb-10">
+    <button onclick="goBack()" class="mb-4 text-blue-600 hover:underline">← Back to Albums</button>
+    <h2 class="text-3xl font-bold mb-4">Youth for Climate Action: Tree Planting Initiative at SDD-UBIDS</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="../images/russanprojects/tree/tree1.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/tree/tree2.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/tree/tree3.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/tree/tree4.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/tree/tree5.jpg" alt="" class="rounded-lg" />
+    </div>
+  </div>
+
+  <div id="album3" class="hidden px-4 pb-10">
+    <button onclick="goBack()" class="mb-4 text-blue-600 hover:underline">← Back to Albums</button>
+    <h2 class="text-3xl font-bold mb-4">Empowering Women and Girls with Disabilities in Adentan Municipality</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="../images/russanprojects/adenta/adenta1.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta2.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta3.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta4.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta5.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta6.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta7.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta8.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/andenta9.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta10.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta11.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta12.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta13.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta14.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta15.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/adenta/adenta16.jpg" alt="" class="rounded-lg" />
+    </div>
+  </div>
+
+  <div id="album4" class="hidden px-4 pb-10">
+    <button onclick="goBack()" class="mb-4 text-blue-600 hover:underline">← Back to Albums</button>
+    <h2 class="text-3xl font-bold mb-4">Promoting Health, Skills, and Economic Empowerment for Rural Women in Wa West,Ghana</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+      <img src="../images/russanprojects/wawest/wa1.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa2.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa3.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa5.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa6.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa7.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa8.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa9.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa10.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa11.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa12.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa13.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa14.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa15.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa16.jpg" alt="" class="rounded-lg" />
+      <img src="../images/russanprojects/wawest/wa17.jpg" alt="" class="rounded-lg" />
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+        © 2023 <a href="../index.html" class="hover:underline">RUSaN</a>. All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li><a href="about.html" class="hover:underline me-4 md:me-6">About Us</a></li>
+        <li><a href="gallery.html" class="hover:underline me-4 md:me-6">Gallery</a></li>
+        <li><a href="contact.html" class="hover:underline">Contact</a></li>
       </ul>
     </div>
-  </div>
-</nav>
+  </footer>
 
-  <!--NAVBAR-->
-<!--GALLERY-->
+  <!-- JS TO TOGGLE ALBUMS -->
+  <script>
+    function showAlbum(albumId) {
+      document.getElementById("albums-overview").classList.add("hidden");
 
+      const albums = ["album1", "album2", "album3", "album4"];
+      albums.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add("hidden");
+      });
 
-<div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
-    <h2 class="text-4xl font-extrabold dark:text-white">Gallery</h2>
-</div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/banner.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/bakery1.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/bakery2.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/bakery3.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/bakery4.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/bakery5.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/bakery6.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/business1.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/healthscreening1.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/healthscreening2.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/soapmaking1.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/soapmaking2.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/final2.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/final1.jpeg" alt="">
-    </div>
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="../images/russanprojects/rusanproject1/final3.jpeg" alt="">
-    </div>
-</div>
+      document.getElementById(albumId).classList.remove("hidden");
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-<!--GALLERY-->
-  <!--FOOTER-->
+    function goBack() {
+      document.getElementById("albums-overview").classList.remove("hidden");
 
+      const albums = ["album1", "album2", "album3", "album4"];
+      albums.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add("hidden");
+      });
 
-<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="../index.html" class="hover:underline">RUSaN</a>. All Rights Reserved.
-  </span>
-  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-      <li>
-          <a href="about.html" class="hover:underline me-4 md:me-6">About Us</a>
-      </li>
-      <li>
-          <a href="gallery.html" class="hover:underline me-4 md:me-6">Gallery</a>
-      </li>
-      <li>
-          <a href="contact.html" class="hover:underline">Contact</a>
-      </li>
-  </ul>
-  </div>
-</footer>
-
-  <!--FOOTER-->
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
